@@ -1,3 +1,4 @@
+import DeveloperCompany.*;
 import Pool.Cuboid;
 import Pool.Rectangle;
 import cylinder.Circle;
@@ -43,5 +44,40 @@ public class Main {
         System.out.println("cuboid.height= " + cuboid.getHeight());
 
         System.out.println("cuboid.volume= " + cuboid.getVolume());
-    }
-}
+
+
+        System.out.println("----------------------------------");
+
+        JuniorDeveloper juniorDeveloper1 = new JuniorDeveloper(1, "ahmet");
+        JuniorDeveloper juniorDeveloper2 = new JuniorDeveloper(2, "ayşe");
+        juniorDeveloper1.work();
+        ;
+        juniorDeveloper2.work();
+        System.out.println(juniorDeveloper1);
+        System.out.println(juniorDeveloper2);
+
+        MidDeveloper midDeveloper = new MidDeveloper(1, "buse");
+        midDeveloper.work();
+        System.out.println(midDeveloper);
+
+        SeniorDeveloper seniorDeveloper = new SeniorDeveloper(1, "hamza");
+        seniorDeveloper.work();
+        System.out.println(seniorDeveloper);
+
+
+        System.out.println("***********************");
+        HRManager hrManager = new HRManager(1, "kerem", new JuniorDeveloper[5],
+                new MidDeveloper[2], new SeniorDeveloper[1]);
+
+        System.out.println(hrManager);
+        hrManager.addEmployee(0,juniorDeveloper1);
+        hrManager.addEmployee(1,juniorDeveloper2);
+        hrManager.addEmployee(0,midDeveloper);
+        hrManager.addEmployee(0,seniorDeveloper);
+        System.out.println(hrManager);
+
+
+
+
+
+}}
